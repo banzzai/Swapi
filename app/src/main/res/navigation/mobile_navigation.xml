@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_people">
+
+    <fragment
+        android:id="@+id/nav_people"
+        android:name="com.example.swapi.ui.peoplesearch.PeopleFragment"
+        android:label="@string/menu_people"
+        tools:layout="@layout/fragment_people_list" >
+        <action
+            android:id="@+id/action_nav_people_to_nav_people_detail"
+            app:destination="@id/nav_people_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_people_detail"
+        android:name="com.example.swapi.ui.people.PeopleDetailsFragment"
+        android:label="@string/menu_people_details"
+        tools:layout="@layout/fragment_people_details" >
+        <argument
+            android:name="people"
+            app:argType="com.example.swapi.data.model.People" />
+        <action
+            android:id="@+id/action_nav_people_details_to_nav_planet_detail"
+            app:destination="@id/nav_planet_detail" />
+        <action
+            android:id="@+id/action_nav_people_details_to_nav_starship_detail"
+            app:destination="@id/nav_starship_detail" />
+        <action
+            android:id="@+id/action_nav_people_details_to_nav_species_detail"
+            app:destination="@id/nav_species_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_planets"
+        android:name="com.example.swapi.ui.planetsearch.PlanetFragment"
+        android:label="@string/menu_planet"
+        tools:layout="@layout/fragment_planet_list" >
+        <action
+            android:id="@+id/action_nav_planet_to_nav_planet_detail"
+            app:destination="@id/nav_planet_detail"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_planet_detail"
+        android:name="com.example.swapi.ui.planet.PlanetDetailsFragment"
+        android:label="@string/menu_planet_details"
+        tools:layout="@layout/fragment_planet_details" >
+        <argument
+            android:name="planet"
+            app:argType="com.example.swapi.data.model.Planet" />
+        <action
+            android:id="@+id/action_nav_planet_details_to_nav_people_detail"
+            app:destination="@id/nav_people_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_species"
+        android:name="com.example.swapi.ui.speciessearch.SpeciesFragment"
+        android:label="@string/menu_species"
+        tools:layout="@layout/fragment_species_list" >
+        <action
+            android:id="@+id/action_nav_species_to_nav_species_detail"
+            app:destination="@id/nav_species_detail"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_species_detail"
+        android:name="com.example.swapi.ui.species.SpeciesDetailsFragment"
+        android:label="@string/menu_species_details"
+        tools:layout="@layout/fragment_species_details" >
+        <argument
+            android:name="species"
+            app:argType="com.example.swapi.data.model.Species" />
+        <action
+            android:id="@+id/action_nav_species_details_to_nav_planet_detail"
+            app:destination="@id/nav_planet_detail" />
+        <action
+            android:id="@+id/action_nav_species_details_to_nav_people_detail"
+            app:destination="@id/nav_people_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_starship_detail"
+        android:name="com.example.swapi.ui.starship.StarshipDetailsFragment"
+        android:label="@string/menu_starship_details"
+        tools:layout="@layout/fragment_starship_details" >
+        <argument
+            android:name="starship"
+            app:argType="com.example.swapi.data.model.Starship" />
+        <action
+            android:id="@+id/action_nav_starship_details_to_nav_people_detail"
+            app:destination="@id/nav_people_detail" />
+    </fragment>
+</navigation>

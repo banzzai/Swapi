@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.peoplesearch.PeopleFragment">
+
+    <!-- CORNER LEFT IMAGE -->
+    <ImageView
+        android:id="@+id/image_details_icon"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/ic_houseboat_24px"
+        app:tint="@color/philo_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp" />
+
+    <!-- NAME -->
+    <TextView
+        android:id="@+id/text_details_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_details_unknown"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/image_details_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- MODEL (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_details_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_name" />
+
+    <!-- MANUFACTURER (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_manufacturer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_manufacturer"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/image_details_icon" />
+
+    <TextView
+        android:id="@+id/text_details_manufacturer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="viewStart"
+        app:layout_constrainedWidth="true"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_labelfor_manufacturer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_details_icon" />
+
+    <!-- CLASS (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_class"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_manufacturer" />
+
+    <TextView
+        android:id="@+id/text_details_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="viewStart"
+        app:layout_constrainedWidth="true"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_labelfor_class"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_manufacturer" />
+
+    <!-- CREW (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_crew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_crew"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_class" />
+
+    <TextView
+        android:id="@+id/text_details_crew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_labelfor_crew"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_class" />
+
+    <!-- PASSENGERS (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_passengers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_passengers"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/text_details_passengers"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_class" />
+
+    <TextView
+        android:id="@+id/text_details_passengers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_class" />
+
+    <!-- HYPERDRIVE (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_hyperdrive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_hyperdrive"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_crew" />
+
+    <TextView
+        android:id="@+id/text_details_hyperdrive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_labelfor_hyperdrive"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_crew" />
+
+    <!-- MGLT (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_mglt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_mglt"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/text_details_mglt"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_crew" />
+
+    <TextView
+        android:id="@+id/text_details_mglt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_crew" />
+
+    <!-- CONSUMABLES (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_consumables"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_consumables"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_hyperdrive" />
+
+    <TextView
+        android:id="@+id/text_details_consumables"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/text_labelfor_consumables"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_hyperdrive" />
+
+    <!-- LENGTH (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_length"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/text_details_length"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_hyperdrive" />
+
+    <TextView
+        android:id="@+id/text_details_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_hyperdrive" />
+
+    <!-- CARGO (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_cargo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_cargo"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_length" />
+
+    <TextView
+        android:id="@+id/text_details_cargo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/text_labelfor_cargo"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_length" />
+
+    <!-- COST (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_cost"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_cargo" />
+
+    <TextView
+        android:id="@+id/text_details_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/text_labelfor_cost"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_cargo" />
+
+    <!-- SPEED (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_speed"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_cost" />
+
+    <TextView
+        android:id="@+id/text_details_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="viewStart"
+        app:layout_constrainedWidth="true"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_labelfor_speed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_cost" />
+
+
+
+    <!-- PILOTS (LABEL THEN RECYCLEVIEW) -->
+    <TextView
+        android:id="@+id/text_labelfor_pilots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_pilots"
+        android:visibility="gone"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_speed" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_pilots"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintTop_toBottomOf="@+id/text_labelfor_pilots"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

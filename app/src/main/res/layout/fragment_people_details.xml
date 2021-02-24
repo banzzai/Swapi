@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.peoplesearch.PeopleFragment">
+
+    <!-- CORNER LEFT IMAGE -->
+    <ImageView
+        android:id="@+id/image_details_icon"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/ic_face_black_24dp"
+        app:tint="@color/philo_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp" />
+
+    <!-- NAME -->
+    <TextView
+        android:id="@+id/text_details_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_details_unknown"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/image_details_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- BIRTH YEAR (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_birth_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_birth_year"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_name" />
+
+    <TextView
+        android:id="@+id/text_details_birth_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_labelfor_birth_year"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_name" />
+
+    <!-- GENDER (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_gender"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/image_details_icon" />
+
+    <TextView
+        android:id="@+id/text_details_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_labelfor_gender"
+        app:layout_constraintTop_toBottomOf="@+id/image_details_icon" />
+
+    <!-- SKIN COLOR (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_skin_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/details_skin_color"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/text_details_skin_color"
+        app:layout_constraintTop_toBottomOf="@+id/image_details_icon" />
+
+    <TextView
+        android:id="@+id/text_details_skin_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_details_icon" />
+
+    <!-- EYE COLOR (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_eye_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/details_eye_color"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_gender" />
+
+    <TextView
+        android:id="@+id/text_details_eye_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_labelfor_eye_color"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_gender" />
+
+    <!-- HEIGHT COLOR (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_height"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/text_details_height"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_gender" />
+
+    <TextView
+        android:id="@+id/text_details_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_gender" />
+
+    <!-- HAIR COLOR (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_hair_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/details_hair_color"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_eye_color" />
+
+    <TextView
+        android:id="@+id/text_details_hair_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/text_labelfor_hair_color"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_eye_color" />
+
+    <!-- MASS (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_mass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_mass"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/text_details_mass"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_height" />
+
+    <TextView
+        android:id="@+id/text_details_mass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_height" />
+
+    <!-- SPECIES (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_species"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_species"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_hair_color" />
+
+    <TextView
+        android:id="@+id/text_details_species"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_labelfor_species"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_hair_color" />
+
+    <!-- HOMEWORLD (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_homeworld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/details_homeworld"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_labelfor_species" />
+
+    <TextView
+        android:id="@+id/text_details_homeworld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_labelfor_homeworld"
+        app:layout_constraintTop_toBottomOf="@+id/text_labelfor_species" />
+
+    <!-- STARSHIP (LABEL THEN RECYCLEVIEW) -->
+    <TextView
+        android:id="@+id/text_labelfor_starships"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        android:text="@string/people_details_starships"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_homeworld" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_starships"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintTop_toBottomOf="@+id/text_labelfor_starships" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

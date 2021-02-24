@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.peoplesearch.PeopleFragment">
+
+    <!-- CORNER LEFT IMAGE -->
+    <ImageView
+        android:id="@+id/image_details_icon"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/ic_public_24px"
+        app:tint="@color/philo_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp" />
+
+    <!-- NAME -->
+    <TextView
+        android:id="@+id/text_details_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_details_unknown"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/image_details_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- POPULATION (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_population"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_population"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_name" />
+
+    <TextView
+        android:id="@+id/text_details_population"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_labelfor_population"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_name" />
+
+    <!-- ROTATION (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_rotation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_rotation"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/image_details_icon" />
+
+    <TextView
+        android:id="@+id/text_details_rotation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_labelfor_rotation"
+        app:layout_constraintTop_toBottomOf="@+id/image_details_icon" />
+
+    <!-- DIAMETER (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_diameter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_diameter"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/text_details_diameter"
+        app:layout_constraintTop_toBottomOf="@+id/image_details_icon" />
+
+    <TextView
+        android:id="@+id/text_details_diameter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_details_icon" />
+
+    <!-- ORBIT (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_orbit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_orbit"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_rotation" />
+
+    <TextView
+        android:id="@+id/text_details_orbit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_labelfor_orbit"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_rotation" />
+
+    <!-- WATER (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_water"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_water"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/text_details_water"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_rotation" />
+
+    <TextView
+        android:id="@+id/text_details_water"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_rotation" />
+
+    <!-- GRAVITY (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_gravity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_gravity"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_orbit" />
+
+    <TextView
+        android:id="@+id/text_details_gravity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        app:layout_constrainedWidth="true"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_labelfor_gravity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_orbit" />
+
+    <!-- CLIMATE (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_climate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_climate"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_gravity" />
+
+    <TextView
+        android:id="@+id/text_details_climate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="viewStart"
+        app:layout_constrainedWidth="true"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_labelfor_climate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_gravity" />
+
+    <!-- TERRAIN (LABEL THEN VALUE) -->
+    <TextView
+        android:id="@+id/text_labelfor_terrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_terrain"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_labelfor_climate" />
+
+    <TextView
+        android:id="@+id/text_details_terrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/string_question_marks"
+        android:textAlignment="viewStart"
+        app:layout_constrainedWidth="true"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_labelfor_terrain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_labelfor_climate" />
+
+    <!-- RESIDENTS (LABEL THEN RECYCLEVIEW) -->
+    <TextView
+        android:id="@+id/text_labelfor_residents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/people_details_residents"
+        android:visibility="gone"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/image_details_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_terrain" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_residents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintTop_toBottomOf="@+id/text_labelfor_residents"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
